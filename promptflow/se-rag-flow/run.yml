@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Run.schema.json
+flow: .
+data: schneider-bot-qna.jsonl
+
+# define cloud resource
+runtime: automatic
+
+connections:
+  answer_the_question_with_context:
+    connection: azure-open-ai-2
+    deployment_name: gpt-35-turbo
+
